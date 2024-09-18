@@ -1,14 +1,34 @@
 const button = document.querySelector('.buttons')
-button.addEventListener('click', (e) => console.log(e.target.textContent))
-let values = [10,'+',3]
+button.addEventListener('click', (e) => e.target.textContent === '=' ? operate(firstNum,secondNum,oper) : nums(e.target.textContent))
+let firstNum = ''
+let secondNum = ''
+let oper = ''
+const FUNCTIONS = '+-/x'
 
-function equate(array){
+function nums(input){
+    if(FUNCTIONS.includes(input) && oper === ''){
+        oper = input
+        console.log('operator')
+    }else if(oper === ''){
+        if(firstNum.includes('.') && input === '.'){
+            firstNum = firstNum
+        }else{
+            firstNum = firstNum.concat(input)
+            console.log(firstNum)
+        }
+    }else{
+        if(FUNCTIONS.includes(input)){
+            secondNum = secondNum
+        }else if(secondNum.includes('.') && input === '.'){
+            secondNum = secondNum
+        }else{
+            secondNum = secondNum.concat(input)
+            console.log(secondNum)
+        }
+    }
 }
 
 function operate(numA, numB, sign){
-    numA = values[0]
-    numB = values[2]
-    sign = values[1]
     if(sign === '+'){
         sum(numA, numB)
     }else if(sign === '-'){
@@ -20,22 +40,22 @@ function operate(numA, numB, sign){
     }
 }
 
-operate()
-
 function sum(numA, numB){
-    // return numA + numB
-    console.log(numA + numB)
+    console.log(parseFloat(numA) + parseFloat(numB))
 }
 
 function remainder(numA, numB){
-    return numA - numB
+    console.log(parseFloat(numA) - parseFloat(numB))
 }
 
 function product(numA, numB){
-    return numA * numB
+    console.log(parseFloat(numA) * parseFloat(numB))
 }
 
 function quotient(numA, numB){
-    if(numB === 0) return 'not so fast'
-    return numA / numB
+    if(parseFloat(numB) === 0){
+        console.log('not so fast')
+    }else{
+        console.log(parseFloat(numA) / parseFloat(numB))
+    }
 }
