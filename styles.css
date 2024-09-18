@@ -1,0 +1,115 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #e4ffe6;
+}
+
+.calculator{
+    margin-top: 8vw;
+    background-color: #afafaf;
+    border-radius: 25px;
+    width: 600px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid black;
+    box-shadow: 10px 20px 5px #394b39;
+}
+
+.screen{
+    margin: 50px 25px 25px 25px;
+    height: 100px;
+    width: 500px;
+    background-color: #c0d5fe;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: 'SUSE', sans-serif;
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: bold;
+    padding-right: 16px;
+    border-radius: 25px;
+    border: 4px solid black;
+    box-shadow: 0px 5px 0px #cdcdcd;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.buttons-top{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px 25px 0px 25px;
+}
+
+.buttons-bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0px 25px 25px 25px;
+}
+
+.numbers{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-family: 'SUSE', sans-serif;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    width: 350px;
+    height: 400px;
+}
+
+.number{
+    flex: 1;
+    min-width: 100px;
+    height: 75px;
+    background-color: #5b5b5b;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+    box-shadow: 2px 5px 0px #cdcdcd;
+}
+
+#zero{
+    flex: 0;
+}
+
+.functions{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0px;
+    width: 100px;
+    height: 400px;
+}
+
+.func{
+    flex: 1;
+    min-width: 100px;
+    height: 75px;
+    background-color: #ffb54d;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'SUSE', sans-serif;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    border: 4px solid black;
+    box-shadow: 2px 5px 0px #cdcdcd;
+}
